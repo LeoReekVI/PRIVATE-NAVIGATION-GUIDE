@@ -49,7 +49,9 @@ Developed from the Tor Browser, with all its privacy features, however for use w
 Available for Windows, macOS and Linux.
 
 ¹ Opera was bought by a Chinese company involved in scandals, raising doubts about its privacy.
+
 ² [PortableApps](https://portableapps.com/apps/) website offers portable versions of major browsers that can be run from a USB drive or external hard drive, allowing you to carry them (with all your settings, extensions, passwords, history, favorites, etc.) and use them on any device without installation, leaving fewer traces on your computer.
+
 ³ Check out detailed browser comparisons at [privacytests.org](https://privacytests.org/) and [avoidthehack.com](https://browsers.avoidthehack.com/).
 
 ## 2. BASIC PRIVACY AND SECURITY SETTINGS IN FIREFOX:
@@ -57,31 +59,55 @@ Available for Windows, macOS and Linux.
 Access the Firefox (or LibreWolf) settings page and configure it as follows:
 
 1- GENERAL:
+
 1.1- In “Language” **consider** selecting “English (US)” so that websites do not identify your language;
+
 1.2- In "Tabs", check "Enable container tabs";
+
 1.3- In "DRM Content," uncheck "Play DRM-controlled content";
+
 1.4- In "Browsing", uncheck "Recommend extensions while you browse";
+
 1.5- In "Navigation", uncheck "Recommend resources while you browse";
+
 2- START:
+
 2.1- In “Home” and “New tabs” select “Blank page”;
+
 2.2- Uncheck "Sponsored Shortcuts";
+
 2.3- Uncheck "Recent activity";
+
 3- RESEARCH:
-3.1- In “Default search engine”, select one of those suggested in topic 3 (such as DuckDuckGo );
+
+3.1- In “Default search engine”, select one of those suggested in topic 3 (such as DuckDuckGo);
+
 3.2- In "Search suggestions," uncheck "Show search suggestions";
+
 4- PRIVACY AND SECURITY:
+
 4.1- In “Enhanced tracking protection”, select “Strict”;
+
 4.2- Check the box "Tell websites not to sell or share my data";
+
 4.3- **Consider** checking "Delete cookies and site data when Firefox is closed";
-4.4- **Consider** unchecking "Ask if you want to save passwords" (saving passwords in browsers is not recommended; use dedicated applications/extensions like Bitwarden) ;
+
+4.4- **Consider** unchecking "Ask if you want to save passwords" (saving passwords in browsers is not recommended; use dedicated applications/extensions like Bitwarden);
+
 4.4- Click on Permissions > Notifications > Settings and check: Block new permission requests to display notifications;
+
 4.5- Check "Block opening of windows or tabs";
+
 4.6- In "Data collection and use by Firefox", uncheck all options;
+
 4.7- In "Website advertising preferences," uncheck all options;
+
 4.8- In "Security," uncheck "Block dangerous or misleading content" (these options are for checking if the URL is malicious in Google's databases, which generated some tracking until 2011. There have been improvements since then to prevent this, but paranoid users still recommend disabling it);
-4.9- In "HTTPS-only mode", select "Enable HTTPS-only mode in all windows";
-DoH encrypted DNS provider addresses listed in topic 4 (such as https://dns.adguard-dns.com/dns-query);
+
+4.9- In "HTTPS-only mode", select "Enable HTTPS-only mode in all windows"; DoH encrypted DNS provider addresses listed in topic 4 (such as https://dns.adguard-dns.com/dns-query);
+
 5- Customize the browser to display the Search Bar separately from the Address Bar (right-click on an empty part of the Toolbar > customize toolbar > select the Search bar and drag it to the desired position and drop it onto the Toolbar).
+
 6- Install and configure uBlock Origin (taught in topic 5.4).
 
 ## 3. PRIVATE SEARCH ENGINES:
@@ -141,56 +167,86 @@ The DNS resolvers below have, at a minimum, the following characteristics: publi
 
 ### Quad 9 with malware filtering and without ECS:
 DoH: https://dns.quad9.net/dns-query
+
 Primary IPv4: 9.9.9.9
+
 Secondary IPv4: 149.112.112.112
+
 Primary IPv6: 2620:fe::fe
+
 Secondary IPv6: 2620:fe::9
 
 ### AdGuard DNS without filtering:
 DoH: https://unfiltered.adguard-dns.com/dns-query
+
 Primary IPv4: 94.140.14.140
+
 Secondary IPv4: 94.140.14.141
+
 Primary IPv6: 2a10:50c0::1:ff
+
 Secondary IPv6: 2a10:50c0::2:ff
 
 ### AdGuard DNS with ad and tracker filtering:
 DoH: https://dns.adguard-dns.com/dns-query
+
 Primary IPv4: 94.140.14.14
+
 Secondary IPv4: 94.140.15.15
+
 Primary IPv6: 2a10:50c0::ad1:ff
+
 Secondary IPv6: 2a10:50c0::ad2:ff
 
 ### AdGuard DNS with ad, tracker, and pornography filtering:
 DoH: https://family.adguard-dns.com/dns-query
+
 Primary IPv4: 94.140.14.15
+
 Secondary IPv4: 94.140.15.16
+
 Primary IPv6: 2a10:50c0::bad1:ff
+
 Secondary IPv6: 2a10:50c0::bad2:ff
 
 ### Mullvad DNS with filtering for malware, ads, and trackers:
 DoH: https://base.dns.mullvad.net/dns-query
+
 IPv4: 194.242.2.4
+
 IPv6: 2a07:e340::4
 
 ### Control D without filtering:
 DoH: https://freedns.controld.com/p0
+
 Primary IPv4: 76.76.2.0
+
 Secondary IPv4: 2606:1a40::
+
 Primary IPv6: 76.76.10.0
+
 Secondary IPv6: 2606:1a40:1::
 
 ### Control D with filtering for malware, ads, and trackers:
 DoH: https://freedns.controld.com/p2
+
 Primary IPv4: 76.76.2.2
+
 Secondary IPv4: 2606:1a40::2
+
 Primary IPv6: 76.76.10.2
+
 Secondary IPv6: 2606:1a40:1::2
 
 ### Control D with filtering for malware, ads, trackers, pornography, and drugs:
 DoH: https://freedns.controld.com/family
+
 Primary IPv4: 76.76.2.4
+
 Secondary IPv4: 2606:1a40::4
+
 Primary IPv6: 76.76.10.4
+
 Secondary IPv6: 2606:1a40:1::4
 
 ### NextDNS (configure filtering options on the website):
@@ -198,57 +254,90 @@ DoH: https://firefox.dns.nextdns.io/
 
 **Cloudflare DNS without filtering:**
 DoH: https://cloudflare-dns.com/dns-query
+
 DoH (Firefox): https://mozilla.cloudflare-dns.com/dns-query
+
 Primary IPv4: 1.1.1.1
+
 Secondary IPv4: 1.0.0.1
+
 Primary IPv6: 2606:4700:4700::1111
+
 Secondary IPv6: 2606:4700:4700::1001
 
 ### Cloudflare DNS with malware filtering:
 DoH: https://security.cloudflare-dns.com/dns-query
+
 Primary IPv4: 1.1.1.2
+
 Secondary IPv4: 1.0.0.2
+
 Primary IPv6: 2606:4700:4700::1112
+
 Secondary IPv6: 2606:4700:4700::1002
 
 ### Cloudflare DNS with malware and pornography filtering:
 DoH: https://family.cloudflare-dns.com/dns-query
+
 Primary IPv4: 1.1.1.3
+
 Secondary IPv4: 1.0.0.3
+
 Primary IPv6: 2606:4700:4700::1113
+
 Secondary IPv6: 2606:4700:4700::1003
 
 ## 4.2. HOW TO CONFIGURE DoH SERVER ON WINDOWS 11:
 
 1. Press Win + I (to access Settings > Network & Internet);
-2- If using a wireless connection, click on Wi-Fi.
+
+2- If using a wireless connection, click on Wi-Fi;
+
 3- Click on “Hardware Properties”;
+
 4- In “DNS Server Assignment” click on “Edit”;
+
 5- In “Edit DNS settings” select “Manual”;
+
 6- Disable IPv4 (IPv6 is now the internet standard and offers security advantages);
+
 7- Enable IPv6;
+
 8- In “Preferred DNS” enter the first IPv6 address corresponding to the desired server (see the list above);
+
 9- In “DNS over HTTPS” select “Enabled (manual template)”;
+
 10- In “DNS over HTTPS model” enter the DoH address corresponding to the desired server (see the list above);
+
 11- In “Fallback to encrypted text” leave “Disabled”;
+
 12- In “Alternative DNS” enter the second IPv6 address corresponding to the desired server (see the list above);
+
 13- Configure the rest the same as in steps 10 to 12;
+
 14- If using a wired connection, click on Ethernet;
+
 15- In “DNS Server Assignment” click on “Edit”;
+
 16- Repeat the same configuration as in steps 4 to 13.
 
 ## 5. EXTENSIONS
 
 Extensions add new functions to your browser and can improve your privacy and security.
-However, only use extensions from trusted sources and try not to use too many, as this can increase the attack surface and fingerprint .
+However, only use extensions from trusted sources and try not to use too many, as this can increase the attack surface and fingerprint.
 
 ### 5.1. ESSENTIAL EXTENSION:
 
 **- [uBlock Origin](https://addons.mozilla.org/pt-BR/firefox/addon/ublock-origin/):** the best adblocker currently available, stands out for its superior blocking rules (both in syntax and repository), low RAM consumption, and diverse features. Check the recommended settings in section 5.2.
+
 An ad blocker , as the name suggests, is used to block advertisements, but it does much more than that; it blocks domains that are sources of malware, scams, phishing, tracking, and allows you to add specific blocking filters, such as against pornography, social networks, gambling, piracy, fake news, paywall, etc.
+
 Examples of things that are blocked: YouTube ads; cookie notices on websites; pop-ups that disrupt browsing; embarrassing ads; misleading buttons that appear on download sites that lead the user to download unwanted things; notices on websites that ask for payment to read more news.
+
 As a result, it promotes greater security, privacy, browsing speed (due to the elimination of the need to download blocked elements), and improves the appearance of websites (due to blocked ads).
+
 Trackers on websites can obtain information about you, such as: IP address, location, click-through rate of other ads, websites visited, screen resolution, device type, operating system, browser data, language, browsing habits, time zone, clipboard information, information filled in on forms, etc. Using a good ad blocker minimizes this.
+
 Internet browsing is the main gateway that allows criminals to access devices, which is why the security provided by an ad blocker is so significant. Its use is as essential as that of an antivirus program; in fact, even the [CIA](https://www.vice.com/en/article/the-nsa-and-cia-use-ad-blockers-because-online-advertising-is-so-dangerous/) and [FBI](https://en.as.com/latest_news/the-reason-why-the-fbi-says-you-should-use-an-ad-blocker-n/) recommend it.
 
 ### 5.2. RECOMMENDED EXTENSIONS:
@@ -282,24 +371,43 @@ Check out relevant information about extensions on the websites [privacyguides.o
 
 ### 5.3. EXTENSIONS NOT RECOMMENDED:
 **- Adblock Plus:** a closed-source program maintained by a private company that has an "acceptable ads" program, where companies can pay to avoid having their ads blocked. It has less efficient blocking and higher RAM consumption compared to uBlock Origin.
+
 **- ClearURLs:** redundant since uBlock Origin added the “removeparam” function; simply add the Dandelion filter. ClearURLs for uBo (topic 5.4).
+
 **- CSS Exfil Protection:** Virtually zero threat, and if the platform's CSS were compromised, you would have much bigger problems to worry about.
+
 **- Dark Reader:** causes performance issues and increases fingerprinting.
+
 **- Decentralized Eyes:** While using local CDNs works with the included scripts, it's not a comprehensive solution and doesn't work with most third-party connections, plus it can increase fingerprinting. This extension is very outdated and less useful after the implementation of Total Cookie Protection in Firefox. LocalCDN is more up-to-date and supports many more frameworks.
+
 **- Disconnect:** it's better to use uBlock. Origin, along with Firefox's Total Cookie Protection.
+
 **- Don't Track Me Google:** unnecessary if you use uBlock. Origin, along with Firefox's Total Cookie Protection, recommends using a private browser, as explained in topic 2. It also exists as a script for ViolentMonkey and similar programs, as explained in topic 5.5.
+
 **- Anti-fingerprinting extensions (such as CanvasBlocker):** redundant after RFP implementation (Resist Finger Printing) and FPP (Fingerprint Printing Protection) in Firefox. It is only useful if you disable RFP in Firefox or if you enable WebGL.
+
 **- Spell checking extensions (like Grammarly or LanguageTool):** send all your typing data to a remote server, a privacy nightmare.
+
 **- Extensions for deleting cookies:** browsers already offer the option to delete cookies when closing, and with Total Cookie Protection in Firefox, this becomes less necessary.
+
 **- Ghostery:** a closed source program maintained by a private advertising company.
+
 **- Google Search Link Fix:** unnecessary if using uBlock Origin, along with Firefox's Total Cookie Protection, can also be used with a private search engine, as explained in topic 2.
+
 **- HTTPS Everywhere:** This is unnecessary since HTTPS-only mode was adopted by browsers and, therefore, has been discontinued.
+
 **- I don't care about cookies:** it was acquired by Gen Digital, a giant that, through acquisitions and mergers, has become the owner of several popular anti-malware and cybersecurity application companies, such as Avira, Avast, AVG, Norton, Symantec, CCleaner, etc. Its programs are known for promoting mass tracking and exhibiting suspicious behavior. Its ad blocker list can still be used safely.
+
 **- Nano Adblocker and Nano Defender:** the project was sold to a company that altered the code to use it as spyware/malware in Chromium-based versions. The Firefox version has another developer and remained secure, however, after this news, users abandoned its use and the project was discontinued.
+
 **- Neat URL and CleanLinks:** redundant with uBlock Since the "removeparam" function was added, simply add the AdGuard URL Tracking Protection filters (native to uBlock Origin) and Dandelion Actually Legitimate URL Shortener Tool (topic 5.4).
+
 **- Other adblock extensions:** using multiple adblock extensions can interfere with each other's functionality. Today, uBlock... Origin is the best option.
+
 **- Privacy Badger and Privacy Possum:** considering that they no longer use heuristics (although heuristics can increase fingerprint), they became unnecessary after the implementation of Total Cookie Protection in Firefox and if you use uBlock Origin. Besides, it's outdated.
+
 **- Smart Referer:** Omits the Referer header from HTTP(S) requests, unless the request is to the same domain as the page you are already on. The Referer header This includes the address of the page you were on before navigating to the current page. This can be used for tracking. Best practices in browsers for HTTPS websites have made this extension unnecessary.
+
 **- uMatrix:** has not been updated since 2019.
 
 ### 5.4. RECOMMENDED SETTINGS IN UBLOCK ORIGIN:
@@ -338,14 +446,19 @@ Source: [uBlock Origin GitHub](https://github.com/uBlockOrigin/uBlock-issues/wik
 > Hard blocking mode greatly increases privacy and security, but it causes frequent website crashes. These crashes can be circumvented, as explained below, but they are an inconvenience to the online browsing experience. Therefore, assess your need for them.
 
 In Settings:
-Disable JavaScript -> ✅
-* If any website experiences a break, simply open the options panel and click on the </> icon to remove the red "X" over it and refresh the page (F5). This will enable JavaScript on that specific domain.
+- Disable JavaScript -> ✅
+
+If any website experiences a break, simply open the options panel and click on the </> icon to remove the red "X" over it and refresh the page (F5). This will enable JavaScript on that specific domain.
 
 Copy the three lines below and paste them into the My Rules tab, under Temporary Rules, and then click Confirm:
-> * * 3p block
-> * * 3p-script block
-> * * 3p-frame block
-* If any website experiences breakage, simply open the options panel and click on the red squares, leaving them uncolored. The "third-party" square corresponds to the first line above and is the one that most often causes breakages, so unchecking it may correct the problem. The "third-party scripts" and "third-party frames" squares correspond to the second and third lines above, respectively. Unchecking all three temporarily disables hard protection (returns to normal protection mode).
+
+```
+* * 3p block
+* * 3p-script block
+* * 3p-frame block
+```
+
+If any website experiences breakage, simply open the options panel and click on the red squares, leaving them uncolored. The "third-party" square corresponds to the first line above and is the one that most often causes breakages, so unchecking it may correct the problem. The "third-party scripts" and "third-party frames" squares correspond to the second and third lines above, respectively. Unchecking all three temporarily disables hard protection (returns to normal protection mode).
 
 ### 5.6. RECOMMENDED FILTER LISTS FOR BLOCKING:
 
@@ -353,339 +466,340 @@ In Filter Lists, at the bottom, click “Import” and, in the box that appears,
 See below for some recommendations:
 
 ```
-**BASIC ALL-IN-ONE LISTS:**
+BASIC ALL-IN-ONE LISTS:
 
-⭐️ **AdBlocker Ultimate Filters** (compilation of uBlock Origin, Adguard and Easy/Fanboy’s lists):
+⭐️ AdBlocker Ultimate Filters (compilation of uBlock Origin, Adguard and Easy/Fanboy’s lists):
 AdBlocker Ultimate Ad Filter (170k): https://filters.adavoid.org/ultimate-ad-filter.txt
 AdBlocker Ultimate Privacy Filter (163k): https://filters.adavoid.org/ultimate-privacy-filter.txt
 AdBlocker Ultimate Security Filter (12k): https://filters.adavoid.org/ultimate-security-filter.txt
 
-**Fanboy Ultimate List** (215k / includes Easy/Fanboy’s Lists = Easylist, Easyprivacy, Fanboy Enhanced Trackers and Fanboy Annoyances (includes Fanboy Social, Fanboy Anti-cookie Warnings and Fanboy Notifications List): https://secure.fanboy.co.nz/r/fanboy-ultimate.txt
+Fanboy Ultimate List (215k / includes Easy/Fanboy’s Lists = Easylist, Easyprivacy, Fanboy Enhanced Trackers and Fanboy Annoyances (includes Fanboy Social, Fanboy Anti-cookie Warnings and Fanboy Notifications List): https://secure.fanboy.co.nz/r/fanboy-ultimate.txt
 
-**AdGuard DNS** (107k / includes social media, privacy/spyware, mobile, EasyList and EasyPrivacy): https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_15_DnsFilter/filter.txt
+AdGuard DNS (107k / includes social media, privacy/spyware, mobile, EasyList and EasyPrivacy): https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_15_DnsFilter/filter.txt
 
-**StevenBlack** (166k / includes AdAway, Dan Pollock - someonewhocares.org, MVPS hosts, Peter Lowe - yoyo.org, URLHaus, hostVN, FadeMint, KADhosts, Mitchell Krog’s, minecraft, Tiuxo, UnckeckyAds): https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+StevenBlack (166k / includes AdAway, Dan Pollock - someonewhocares.org, MVPS hosts, Peter Lowe - yoyo.org, URLHaus, hostVN, FadeMint, KADhosts, Mitchell Krog’s, minecraft, Tiuxo, UnckeckyAds): https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
 
-**MULTIPURPOSE LISTS:**
+MULTIPURPOSE LISTS:
 
-⭐️ **HaGeZi's DNS Blocklist Pro Mini** (65k): https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.mini.txt
+⭐️ HaGeZi's DNS Blocklist Pro Mini (65k): https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.mini.txt
 
-**HaGeZi's Multi DNS Blocklist Pro Full** (167k): https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt
+HaGeZi's Multi DNS Blocklist Pro Full (167k): https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt
 
-**HaGeZi's Multi DNS Blocklist Pro++ Mini** (89k): https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.plus.mini.txt
+HaGeZi's Multi DNS Blocklist Pro++ Mini (89k): https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.plus.mini.txt
 
-**HaGeZi's Multi DNS Blocklist Pro++ Full** (288k): https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.plus.txt
+HaGeZi's Multi DNS Blocklist Pro++ Full (288k): https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.plus.txt
 
-**HaGeZi's Multi DNS Blocklist Ultimate Mini** (103k / breakage): https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/ultimate.mini.txt
+HaGeZi's Multi DNS Blocklist Ultimate Mini (103k / breakage): https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/ultimate.mini.txt
 
-**HaGeZi's Multi DNS Blocklist Ultimate Full** (340k / breakage): https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/ultimate.txt
+HaGeZi's Multi DNS Blocklist Ultimate Full (340k / breakage): https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/ultimate.txt
 
-**Combined Privacy Block Lists (CPBL) for adblock Mini** (98k): https://raw.githubusercontent.com/bongochong/CombinedPrivacyBlockLists/refs/heads/master/MiniLists/cpbl-abp-mini.txt
+Combined Privacy Block Lists (CPBL) for adblock Mini (98k): https://raw.githubusercontent.com/bongochong/CombinedPrivacyBlockLists/refs/heads/master/MiniLists/cpbl-abp-mini.txt
 
-**Combined Privacy Block Lists for adblock** (156k): https://raw.githubusercontent.com/bongochong/CombinedPrivacyBlockLists/master/cpbl-abp-list.txt
+Combined Privacy Block Lists for adblock (156k): https://raw.githubusercontent.com/bongochong/CombinedPrivacyBlockLists/master/cpbl-abp-list.txt
 
-**OISD Blocklist small** (44k): https://small.oisd.nl
+OISD Blocklist small (44k): https://small.oisd.nl
 
-⭐️ **OISD Blocklist big** (179k): https://big.oisd.nl/
+⭐️ OISD Blocklist big (179k): https://big.oisd.nl/
 
-**1Hosts Lite** (58k): https://raw.githubusercontent.com/badmojr/1Hosts/master/Lite/adblock.txt
+1Hosts Lite (58k): https://raw.githubusercontent.com/badmojr/1Hosts/master/Lite/adblock.txt
 
-**1Hosts Pro** (143k / breakage): https://raw.githubusercontent.com/badmojr/1Hosts/master/Pro/adblock.txt
+1Hosts Pro (143k / breakage): https://raw.githubusercontent.com/badmojr/1Hosts/master/Pro/adblock.txt
 
-⭐️ **Adaway** (6,5k): https://adaway.org/hosts.txt
+⭐️ Adaway (6,5k): https://adaway.org/hosts.txt
 
-**Peter Lowe's hosts** (3,4k): https://pgl.yoyo.org/adservers/serverlist.php?hostformat=adblockplus&showintro=1&mimetype=plaintext
+Peter Lowe's hosts (3,4k): https://pgl.yoyo.org/adservers/serverlist.php?hostformat=adblockplus&showintro=1&mimetype=plaintext
 
-⭐️ **Dan Pollock’s hosts** (11,7k): https://someonewhocares.org/hosts/hosts
+⭐️ Dan Pollock’s hosts (11,7k): https://someonewhocares.org/hosts/hosts
 
-⭐️ **MVPS hosts** (8,7k / outdated): https://winhelp2002.mvps.org/hosts.txt
+⭐️ MVPS hosts (8,7k / outdated): https://winhelp2002.mvps.org/hosts.txt
 
-**SNAFU Blocklist** (62k): https://raw.githubusercontent.com/RooneyMcNibNug/pihole-stuff/master/SNAFU.txt
+SNAFU Blocklist (62k): https://raw.githubusercontent.com/RooneyMcNibNug/pihole-stuff/master/SNAFU.txt
 
-**GoodbyeAds Filters** (278k): https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Formats/GoodbyeAds-AdBlock-Filter.txt
+GoodbyeAds Filters (278k): https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Formats/GoodbyeAds-AdBlock-Filter.txt
 
-**hBlock Host** (598k): https://hblock.molinero.dev/hosts_adblock.txt
+hBlock Host (598k): https://hblock.molinero.dev/hosts_adblock.txt
 
-**Divested Host** (856k): https://divested.dev/hosts-domains-wildcards
+Divested Host (856k): https://divested.dev/hosts-domains-wildcards
 
 
-**ANTI-ADVERTISING LISTS:**
+ANTI-ADVERTISING LISTS:
 
-**Firebog WaLLy3K’s Admiral** (>1k): https://v.firebog.net/hosts/Admiral.txt
+Firebog WaLLy3K’s Admiral (>1k): https://v.firebog.net/hosts/Admiral.txt
 
-**Firebog WaLLy3K’s Pringent Ads** (4k): https://v.firebog.net/hosts/Prigent-Ads.txt
+Firebog WaLLy3K’s Pringent Ads (4k): https://v.firebog.net/hosts/Prigent-Ads.txt
 
-**AWAvenue Ads Rule** (>1k): https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
+AWAvenue Ads Rule (>1k): https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
 
-**Shadow Whisperer Ads** (21k): https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Ads
+Shadow Whisperer Ads (21k): https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Ads
 
-**Disconnect Advertising Filter List** (3k / outdated): https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt
+Disconnect Advertising Filter List (3k / outdated): https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt
 
-**AdGuard CNAME-ads** (9,8k): https://raw.githubusercontent.com/AdguardTeam/cname-trackers/master/data/combined_disguised_ads.txt
+AdGuard CNAME-ads (9,8k): https://raw.githubusercontent.com/AdguardTeam/cname-trackers/master/data/combined_disguised_ads.txt
 
-**ANTI-TRACKING LISTS:**
+ANTI-TRACKING LISTS:
 
-**Quidsup NoTrack Tracker Blocklist** (16k): https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt
+Quidsup NoTrack Tracker Blocklist (16k): https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt
 
-**FrogEye** (33k): https://hostfiles.frogeye.fr/firstparty-trackers-hosts.txt
+FrogEye (33k): https://hostfiles.frogeye.fr/firstparty-trackers-hosts.txt
 
-**NoTraking Hosts** (420k / outdated): https://raw.githubusercontent.com/notracking/hosts-blocklists/master/adblock/adblock.txt
+NoTraking Hosts (420k / outdated): https://raw.githubusercontent.com/notracking/hosts-blocklists/master/adblock/adblock.txt
 
-**Energized Exodus Privacy** (>1k): https://energized.pro/mirror/exodus-privacy-trackers.txt
+Energized Exodus Privacy (>1k): https://energized.pro/mirror/exodus-privacy-trackers.txt
 
-**Exodus Privacy Blokada version** (>1k): https://blokada.org/mirror/v5/exodusprivacy/standard/hosts.txt
+Exodus Privacy Blokada version (>1k): https://blokada.org/mirror/v5/exodusprivacy/standard/hosts.txt
 
-**Energized DuckDuckGo Tracker Radar** (1k): https://energized.pro/mirror/duckduckgo-tracker-blocklists.txt
+Energized DuckDuckGo Tracker Radar (1k): https://energized.pro/mirror/duckduckgo-tracker-blocklists.txt
 
-**DuckDuckGo Radar Blokada version** (12,6k): https://blokada.org/blocklists/ddgtrackerradar/standard/hosts.txt
+DuckDuckGo Radar Blokada version (12,6k): https://blokada.org/blocklists/ddgtrackerradar/standard/hosts.txt
 
-**Energized Ghostery WhoTracks.me** (3k): https://energized.pro/mirror/whotracks-me.txt
+Energized Ghostery WhoTracks.me (3k): https://energized.pro/mirror/whotracks-me.txt
 
-**AdGuard CNAME-trackers** (163k): https://raw.githubusercontent.com/AdguardTeam/cname-trackers/master/data/combined_disguised_trackers.txt
+AdGuard CNAME-trackers (163k): https://raw.githubusercontent.com/AdguardTeam/cname-trackers/master/data/combined_disguised_trackers.txt
 
-**Abine DNT** (>1k / outdated): https://raw.githubusercontent.com/HxxxxxS/Blocklists/master/lists/Abine-DNT.txt
+Abine DNT (>1k / outdated): https://raw.githubusercontent.com/HxxxxxS/Blocklists/master/lists/Abine-DNT.txt
 
-**Disconnect Tracking Filter List** (>1k / outdated): https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt
+Disconnect Tracking Filter List (>1k / outdated): https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt
 
-**REMOVE TRACKING URL PARAMETERS LISTS:**
+REMOVE TRACKING URL PARAMETERS LISTS:
 
-⭐️ **Dandelion Sprout’s Actually Legitimate URL Shortner Tool** (2,7k): https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt
+⭐️ Dandelion Sprout’s Actually Legitimate URL Shortner Tool (2,7k): https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt
 
-**AdGuard Tracking URL Parameters** (2k): https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_17_TrackParam/filter.txt
+AdGuard Tracking URL Parameters (2k): https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_17_TrackParam/filter.txt
 
-**Dandelion Sprout’s ClearURLs** (>1k / based on ClearURLs extension): https://raw.githubusercontent.com/DandelionSprout/adfilt/master/ClearURLs%20for%20uBo/clear_urls_uboified.txt
+Dandelion Sprout’s ClearURLs (>1k / based on ClearURLs extension): https://raw.githubusercontent.com/DandelionSprout/adfilt/master/ClearURLs%20for%20uBo/clear_urls_uboified.txt
 
-**PRIVACY LISTS:**
+PRIVACY LISTS:
 
-⭐️ **Yokoffing's Block third-party fonts** (>1k / better than the original Fanboy):
+⭐️ Yokoffing's Block third-party fonts (>1k / better than the original Fanboy):
 https://raw.githubusercontent.com/yokoffing/filterlists/main/block_third_party_fonts.txt
 
-⭐️ **Yokoffing's Click2Load** (>1k): https://raw.githubusercontent.com/yokoffing/filterlists/main/click2load.txt
+⭐️ Yokoffing's Click2Load (>1k): https://raw.githubusercontent.com/yokoffing/filterlists/main/click2load.txt
 
-**Yokoffing's Privacy Essentials** (>1k / includes Click2Load / breakage): https://raw.githubusercontent.com/yokoffing/filterlists/main/privacy_essentials.txt
+Yokoffing's Privacy Essentials (>1k / includes Click2Load / breakage): https://raw.githubusercontent.com/yokoffing/filterlists/main/privacy_essentials.txt
 
-⭐️ **Divested Fingerprinting** (>1k): https://divested.dev/blocklists/Fingerprinting.ubl
+⭐️ Divested Fingerprinting (>1k): https://divested.dev/blocklists/Fingerprinting.ubl
 
-⭐️ **DeveloperDan Lightswitch05's AMP (Google's Accelerated Mobile Pages) hosts** (16k / for mobiles): https://www.github.developerdan.com/hosts/lists/amp-hosts-extended.txt
+⭐️ DeveloperDan Lightswitch05's AMP (Google's Accelerated Mobile Pages) hosts (16k / for mobiles): https://www.github.developerdan.com/hosts/lists/amp-hosts-extended.txt
 
-**Curben Fingerprinting by JS** (253k): https://curbengh.github.io/malware-filter/tracking-filter.txt
+Curben Fingerprinting by JS (253k): https://curbengh.github.io/malware-filter/tracking-filter.txt
 
-**ANTI-ANNOYANCE LISTS:**
+ANTI-ANNOYANCE LISTS:
 
-**Easylist Adblock Warning Removal List** (2k / are there any contraindications for use with uBlock Origin): https://easylist-downloads.adblockplus.org/antiadblockfilters.txt?a=1
+Easylist Adblock Warning Removal List (2k / are there any contraindications for use with uBlock Origin): https://easylist-downloads.adblockplus.org/antiadblockfilters.txt?a=1
 
-**Nano Defender** (2,6k / outdated / are there any contraindications for use with uBlock Origin): https://raw.githubusercontent.com/NanoAdblocker/NanoFilters/master/NanoMirror/NanoDefender.txt
+Nano Defender (2,6k / outdated / are there any contraindications for use with uBlock Origin): https://raw.githubusercontent.com/NanoAdblocker/NanoFilters/master/NanoMirror/NanoDefender.txt
 
-**Anti-Circumvention AdBlock Plus** (>1k / are there any contraindications for use with uBlock Origin): https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt?a=1
+Anti-Circumvention AdBlock Plus (>1k / are there any contraindications for use with uBlock Origin): https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt?a=1
 
-**Yokoffing's Annoyance List** (>1k): https://raw.githubusercontent.com/yokoffing/filterlists/main/annoyance_list.txt
+Yokoffing's Annoyance List (>1k): https://raw.githubusercontent.com/yokoffing/filterlists/main/annoyance_list.txt
 
-**Dandelion Sprout’s Fanboy Notifications** (3k / better than the original): https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Other%20domains%20versions/FanboyNotifications-LoadableInUBO.txt
+Dandelion Sprout’s Fanboy Notifications (3k / better than the original): https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Other%20domains%20versions/FanboyNotifications-LoadableInUBO.txt
 
-**ANTI-MALWARE LISTS:**
+ANTI-MALWARE LISTS:
 
-⭐️ **HaGeZi's Most Abused TDLs** (>1k): https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/spam-tlds-ublock.txt
+⭐️ HaGeZi's Most Abused TDLs (>1k): https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/spam-tlds-ublock.txt
 
-⭐️ **Dandelion Sprout’s Anti-Malware List** (144k): https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/Dandelion%20Sprout's%20Anti-Malware%20List.txt
+⭐️ Dandelion Sprout’s Anti-Malware List (144k): https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/Dandelion%20Sprout's%20Anti-Malware%20List.txt
 
-**Dandelion Sprout’s Annoyances List** (148k / includes Sprout’s Dandelion anti-malware List and Sprout’s Dandelion Without Logging List): https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AnnoyancesList
+Dandelion Sprout’s Annoyances List (148k / includes Sprout’s Dandelion anti-malware List and Sprout’s Dandelion Without Logging List): https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AnnoyancesList
 
-⭐️ **iam-py-test's The malicious website blocklist** (38k): https://raw.githubusercontent.com/iam-py-test/my_filters_001/refs/heads/main/antimalware.txt
+⭐️ iam-py-test's The malicious website blocklist (38k): https://raw.githubusercontent.com/iam-py-test/my_filters_001/refs/heads/main/antimalware.txt
 
-**iam-py-test's uBlock Combo** (153k / includes iam-py-test's The malicious website blocklist, Dandelion Sprout’s Anti-Malware List, Dandelion Sprout’s Legitimate URL Shortner Tool and iam-py-test's anti-typo list): https://raw.githubusercontent.com/iam-py-test/uBlock-combo/refs/heads/main/list.txt
+iam-py-test's uBlock Combo (153k / includes iam-py-test's The malicious website blocklist, Dandelion Sprout’s Anti-Malware List, Dandelion Sprout’s Legitimate URL Shortner Tool and iam-py-test's anti-typo list): https://raw.githubusercontent.com/iam-py-test/uBlock-combo/refs/heads/main/list.txt
 
-⭐️ **FMHY Unsafe Sites Filterlist** (>1k): https://raw.githubusercontent.com/fmhy/FMHYFilterlist/main/filterlist.txt
+⭐️ FMHY Unsafe Sites Filterlist (>1k): https://raw.githubusercontent.com/fmhy/FMHYFilterlist/main/filterlist.txt
 
-**Stalkerware Indicators List** (>1k): https://raw.githubusercontent.com/AssoEchap/stalkerware-indicators/master/generated/hosts
+Stalkerware Indicators List (>1k): https://raw.githubusercontent.com/AssoEchap/stalkerware-indicators/master/generated/hosts
 
-**BarbBlock** (>1k): https://paulgb.github.io/BarbBlock/blacklists/ublock-origin.txt
+BarbBlock (>1k): https://paulgb.github.io/BarbBlock/blacklists/ublock-origin.txt
 
-**Quidsup NoTrack Malware Blocklist** (>1k): https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-malware.txt
+Quidsup NoTrack Malware Blocklist (>1k): https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-malware.txt
 
-**Team CYMRU Bogon List** (2,8k): https://www.team-cymru.org/Services/Bogons/fullbogons-ipv4.txt
+Team CYMRU Bogon List (2,8k): https://www.team-cymru.org/Services/Bogons/fullbogons-ipv4.txt
 
-**CyberHost Malware and Phishing** (12k): https://lists.cyberhost.uk/malware.txt
+CyberHost Malware and Phishing (12k): https://lists.cyberhost.uk/malware.txt
 
-**The Big List of Hacked Malware Web Sites** (20k): https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/refs/heads/master/.input_sources/hacked-malware-websites.txt
+The Big List of Hacked Malware Web Sites (20k): https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/refs/heads/master/.input_sources/hacked-malware-websites.txt
 
-**Shadow Whisperer Malware** (45k): https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/refs/heads/master/Lists/Malware
+Shadow Whisperer Malware (45k): https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/refs/heads/master/Lists/Malware
 
-**Firebog WaLLy3K’s Pringent Malware** (180k): https://v.firebog.net/hosts/Prigent-Malware.txt
+Firebog WaLLy3K’s Pringent Malware (180k): https://v.firebog.net/hosts/Prigent-Malware.txt
 
-**Disconnect Malware Filter Domains** (1k / outdated): https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/Subscribable-Lists/ParsedBlacklists/Disconnect-Malware-Filter.txt
+Disconnect Malware Filter Domains (1k / outdated): https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/Subscribable-Lists/ParsedBlacklists/Disconnect-Malware-Filter.txt
 
-**Disconnect Malvertising Filter List** (3k / outdated): https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt
+Disconnect Malvertising Filter List (3k / outdated): https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt
 
-**THREATS INTELLIGENCE LISTS:**
+THREATS INTELLIGENCE LISTS:
 
-⭐️ **HaGeZi's Threat Intelligence Feeds Mini** (78k): https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/tif.mini.txt
+⭐️ HaGeZi's Threat Intelligence Feeds Mini (78k): https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/tif.mini.txt
 
-**HaGeZi's Threat Intelligence Feeds Medium** (337k): https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/tif.medium.txt
+HaGeZi's Threat Intelligence Feeds Medium (337k): https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/tif.medium.txt
 
-**HaGeZi's Threat Intelligence Feeds Full** (685k): https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/tif.txt
+HaGeZi's Threat Intelligence Feeds Full (685k): https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/tif.txt
 
-**Emerging Threats PiHole** (3k): https://hosts.tweedge.net/malicious.txt
+Emerging Threats PiHole (3k): https://hosts.tweedge.net/malicious.txt
 
-**Threat Fox** (65k): https://threatfox.abuse.ch/downloads/hostfile/
+Threat Fox (65k): https://threatfox.abuse.ch/downloads/hostfile/
 
-**ANTI-SCAM LISTS:**
+ANTI-SCAM LISTS:
 
-⭐️ **Scam Blocklist by DurableNapkin** (>1k): https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt
+⭐️ Scam Blocklist by DurableNapkin (>1k): https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt
 
-**Malware Filter Phishing** (>1k): https://malware-filter.gitlab.io/malware-filter/phishing-filter-hosts.txt
+Malware Filter Phishing (>1k): https://malware-filter.gitlab.io/malware-filter/phishing-filter-hosts.txt
 
-**xRuffKez's Newly Registered Domains (NRDs) 14 days pishing adblock** (4k): https://codeberg.org/xRuffKez/NRD/raw/branch/main/lists/14-day/adblock/nrd-phishing-14day
+xRuffKez's Newly Registered Domains (NRDs) 14 days pishing adblock (4k): https://codeberg.org/xRuffKez/NRD/raw/branch/main/lists/14-day/adblock/nrd-phishing-14day
 
-⭐️ **Spam404** (7k): https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt
+⭐️ Spam404 (7k): https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt
 
-**Phishing Army Blocklist** (82k): https://phishing.army/download/phishing_army_blocklist.txt
+Phishing Army Blocklist (82k): https://phishing.army/download/phishing_army_blocklist.txt
 
-**ANTI-COIN MINERS LISTS:**
+ANTI-COIN MINERS LISTS:
 
-**NoCoin AdBlock Plus** (>1k): https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/nocoin.txt
+NoCoin AdBlock Plus (>1k): https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/nocoin.txt
 
-**NoCoin hosts** (>1k): https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt
+NoCoin hosts (>1k): https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt
 
-**Firebog WaLLy3K’s Pringente Crypto** (16k): https://v.firebog.net/hosts/Prigent-Crypto.txt
+Firebog WaLLy3K’s Pringente Crypto (16k): https://v.firebog.net/hosts/Prigent-Crypto.txt
 
-**BYPASS PAYWALLS AND LOGGIN LISTS:**
+BYPASS PAYWALLS AND LOGGIN LISTS:
 
-⭐️ **Magnolia Bypass Paywalls Clean filters** (1k): https://gitflic.ru/project/magnolia1234/bypass-paywalls-clean-filters/blob/raw?file=bpc-paywall-filter.txt
+⭐️ Magnolia Bypass Paywalls Clean filters (1k): https://gitflic.ru/project/magnolia1234/bypass-paywalls-clean-filters/blob/raw?file=bpc-paywall-filter.txt
 
-**Liam anti-paywall** (2k): https://raw.githubusercontent.com/liamengland1/miscfilters/master/antipaywall.txt
+Liam anti-paywall (2k): https://raw.githubusercontent.com/liamengland1/miscfilters/master/antipaywall.txt
 
-**Dandelion Sprout’s Without Logging** (>1k): https://raw.githubusercontent.com/DandelionSprout/adfilt/master/BrowseWebsitesWithoutLoggingIn.txt
+Dandelion Sprout’s Without Logging (>1k): https://raw.githubusercontent.com/DandelionSprout/adfilt/master/BrowseWebsitesWithoutLoggingIn.txt
 
-**iam-py-test's Anticookie and Sign-up** (>1k): https://raw.githubusercontent.com/iam-py-test/my_filters_001/refs/heads/main/anti-cookie%2Bsign%20up.txt
+iam-py-test's Anticookie and Sign-up (>1k): https://raw.githubusercontent.com/iam-py-test/my_filters_001/refs/heads/main/anti-cookie%2Bsign%20up.txt
 
-**Yokoffing antipaywall filters** (>1k): https://raw.githubusercontent.com/yokoffing/filterlists/refs/heads/main/antipaywall_filters_without_element_hiding.txt
+Yokoffing antipaywall filters (>1k): https://raw.githubusercontent.com/yokoffing/filterlists/refs/heads/main/antipaywall_filters_without_element_hiding.txt
 
-**OTHER HAGEZI’S LISTS:**
+OTHER HAGEZI’S LISTS:
 
-**HaGeZi's Dynamic DNS** (>1k / phishing): https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/dyndns.txt
+HaGeZi's Dynamic DNS (>1k / phishing): https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/dyndns.txt
 
-**HaGeZi's Badware Hoster DNS Blocklist** (2k): https://gitlab.com/hagezi/mirror/-/raw/main/dns-blocklists/adblock/hoster.txt
+HaGeZi's Badware Hoster DNS Blocklist (2k): https://gitlab.com/hagezi/mirror/-/raw/main/dns-blocklists/adblock/hoster.txt
 
-**HaGeZi's Encrypted DNS Bypass Blocklist** (1,4k / breakage): https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/doh.txt
+HaGeZi's Encrypted DNS Bypass Blocklist (1,4k / breakage): https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/doh.txt
 
-**HaGeZi's URL Shorteners Whitelist / Allowlist** (5,4k): https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/whitelist-urlshortener.txt
+HaGeZi's URL Shorteners Whitelist / Allowlist (5,4k): https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/whitelist-urlshortener.txt
 
-**HaGeZi's Whitelist / Allowlist Referral** (>1k): https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/whitelist-referral.txt
+HaGeZi's Whitelist / Allowlist Referral (>1k): https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/whitelist-referral.txt
 
-**OTHER CELENITY’S LISTS:**
+OTHER CELENITY’S LISTS:
 
-**Celenity BadBlock** (16k / breakage): https://badblock.celenity.dev/abp/badblock.txt
+Celenity BadBlock (16k / breakage): https://badblock.celenity.dev/abp/badblock.txt
 
-**Celenity BadBlock+** (16k / breakage): https://badblock.celenity.dev/abp/badblock_plus.txt
+Celenity BadBlock+ (16k / breakage): https://badblock.celenity.dev/abp/badblock_plus.txt
 
-**Celenity’s Whitelist** (6k): https://badblock.celenity.dev/abp/whitelist.txt
+Celenity’s Whitelist (6k): https://badblock.celenity.dev/abp/whitelist.txt
 
-**Celenity’s Block-SVG** (>1k): https://badblock.celenity.dev/hardened/block-svg.txt
+Celenity’s Block-SVG (>1k): https://badblock.celenity.dev/hardened/block-svg.txt
 
-**Celenity’s Unbreak Block-SVG** (>1k): https://badblock.celenity.dev/hardened/unbreak-svg.txt
+Celenity’s Unbreak Block-SVG (>1k): https://badblock.celenity.dev/hardened/unbreak-svg.txt
 
-**Celenity’s Block-WebGL** (>1k): https://badblock.celenity.dev/hardened/block-webgl.txt
+Celenity’s Block-WebGL (>1k): https://badblock.celenity.dev/hardened/block-webgl.txt
 
-**Celenity’s Unbreak Block-WebGL** (>1k): https://badblock.celenity.dev/hardened/unbreak-webgl.txt
+Celenity’s Unbreak Block-WebGL (>1k): https://badblock.celenity.dev/hardened/unbreak-webgl.txt
 
-**Celenity’s Block-WebGPU** (>1k): https://badblock.celenity.dev/hardened/block-webgpu.txt 
+Celenity’s Block-WebGPU (>1k): https://badblock.celenity.dev/hardened/block-webgpu.txt 
 
-**Celenity’s Unbreak Block-WebGPU** (>1k): https://badblock.celenity.dev/hardened/unbreak-webgpu.txt
+Celenity’s Unbreak Block-WebGPU (>1k): https://badblock.celenity.dev/hardened/unbreak-webgpu.txt
 
-**Celenity’s Block-WebRCT** (>1k): https://badblock.celenity.dev/hardened/block-webrtc.txt
+Celenity’s Block-WebRCT (>1k): https://badblock.celenity.dev/hardened/block-webrtc.txt
 
-**Celenity’s Unbreak Block-WebRTC** (>1k): https://badblock.celenity.dev/hardened/unbreak-webrtc.txt
+Celenity’s Unbreak Block-WebRTC (>1k): https://badblock.celenity.dev/hardened/unbreak-webrtc.txt
 
-**Celenity’s Click-Tracking** (>1k): https://badblock.celenity.dev/abp/click-tracking.txt
+Celenity’s Click-Tracking (>1k): https://badblock.celenity.dev/abp/click-tracking.txt
 
-**Celenity’s DoH / stop DNS bypass** (>1k): https://badblock.celenity.dev/abp/doh.txt
+Celenity’s DoH / stop DNS bypass (>1k): https://badblock.celenity.dev/abp/doh.txt
 
-**Celenity’s block websites associated with DRM** (>1k): https://badblock.celenity.dev/abp/drm.txt
+Celenity’s block websites associated with DRM (>1k): https://badblock.celenity.dev/abp/drm.txt
 
-**Celenity’s Block Beacon** (>1k): https://gitlab.com/celenityy/Phoenix/-/raw/pages/uBlock/beacon.txt
+Celenity’s Block Beacon (>1k): https://gitlab.com/celenityy/Phoenix/-/raw/pages/uBlock/beacon.txt
 
-**Celenity’s block crap / toxic domains** (>1k): https://badblock.celenity.dev/abp/crap.txt
+Celenity’s block crap / toxic domains (>1k): https://badblock.celenity.dev/abp/crap.txt
 
-**Celenity’s block find my device** (>1k): https://badblock.celenity.dev/abp/find-my.txt
+Celenity’s block find my device (>1k): https://badblock.celenity.dev/abp/find-my.txt
 
-**OTHER DANDELION SPROUT’S LISTS:**
+OTHER DANDELION SPROUT’S LISTS:
 
-**Dandelion Sprout’s Anti-'Functionality removal' text copying and right-clicking** (>1k): https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AntiFunctionalityRemovalList.txt
+Dandelion Sprout’s Anti-'Functionality removal' text copying and right-clicking (>1k): https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AntiFunctionalityRemovalList.txt
 
-**Dandelion Sprout’s Unusual Ads** (>1k): https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdRemovalListForUnusualAds.txt
+Dandelion Sprout’s Unusual Ads (>1k): https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdRemovalListForUnusualAds.txt
 
-**Dandelion Sprout’s Suspicious** (9k): https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/AdGuardHomeDisallowedIPs.txt
+Dandelion Sprout’s Suspicious (9k): https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/AdGuardHomeDisallowedIPs.txt
 
-**Dandelion Sprout’s Extremely Condensed List** (>1k): https://raw.githubusercontent.com/DandelionSprout/adfilt/master/ExtremelyCondensedList.txt
+Dandelion Sprout’s Extremely Condensed List (>1k): https://raw.githubusercontent.com/DandelionSprout/adfilt/master/ExtremelyCondensedList.txt
 
-**OTHER IAM-PY-TEST LISTS:**
+OTHER IAM-PY-TEST LISTS:
 
-**iam-py-test's Anti-Dynamic DNS** (>1k): https://raw.githubusercontent.com/iam-py-test/my_filters_001/refs/heads/main/antidynamicdns.txt
+iam-py-test's Anti-Dynamic DNS (>1k): https://raw.githubusercontent.com/iam-py-test/my_filters_001/refs/heads/main/antidynamicdns.txt
 
-**iam-py-test's Anti-"Private analytics"** (>1k): https://raw.githubusercontent.com/iam-py-test/my_filters_001/refs/heads/main/anti-privacy-analytics.txt
+iam-py-test's Anti-"Private analytics" (>1k): https://raw.githubusercontent.com/iam-py-test/my_filters_001/refs/heads/main/anti-privacy-analytics.txt
 
-**iam-py-test's Anti-Redirectors** (>1k): https://raw.githubusercontent.com/iam-py-test/my_filters_001/refs/heads/main/anti-redirectors.txt
+iam-py-test's Anti-Redirectors (>1k): https://raw.githubusercontent.com/iam-py-test/my_filters_001/refs/heads/main/anti-redirectors.txt
 
-**iam-py-test's Clickbait blocklist** (>1k): https://raw.githubusercontent.com/iam-py-test/my_filters_001/refs/heads/main/clickbait.txt
+iam-py-test's Clickbait blocklist (>1k): https://raw.githubusercontent.com/iam-py-test/my_filters_001/refs/heads/main/clickbait.txt
 
-**iam-py-test's IP Lookup Service Blocklist** (>1k): https://raw.githubusercontent.com/iam-py-test/my_filters_001/refs/heads/main/antiiplookup.txt
+iam-py-test's IP Lookup Service Blocklist (>1k): https://raw.githubusercontent.com/iam-py-test/my_filters_001/refs/heads/main/antiiplookup.txt
 
-**iam-py-test's Anti-Norton** (>1k): https://github.com/iam-py-test/my_filters_001/raw/refs/heads/main/anti-norton.txt
+iam-py-test's Anti-Norton (>1k): https://github.com/iam-py-test/my_filters_001/raw/refs/heads/main/anti-norton.txt
 
-**iam-py-test's anti-PUP** (>1k): https://raw.githubusercontent.com/iam-py-test/my_filters_001/refs/heads/main/antipup.txt
+iam-py-test's anti-PUP (>1k): https://raw.githubusercontent.com/iam-py-test/my_filters_001/refs/heads/main/antipup.txt
 
 OTHER ENERGIZED LISTS:
 
-**Energized Spark** (85k): https://energized.pro/spark/adblock.txt
+Energized Spark (85k): https://energized.pro/spark/adblock.txt
 
-**Energized Blu** (188k): https://energized.pro/blu/adblock.txt
+Energized Blu (188k): https://energized.pro/blu/adblock.txt
 
-**Energized Ultimate** (510k): https://energized.pro/ultimate/adblock.txt
+Energized Ultimate (510k): https://energized.pro/ultimate/adblock.txt
 
-**Energized Antipop-ups** (47k): https://energized.pro/antipopads-re/adblock.txt
+Energized Antipop-ups (47k): https://energized.pro/antipopads-re/adblock.txt
 
-**OTHER BLOCK LIST PROJECT LISTS:**
+OTHER BLOCK LIST PROJECT LISTS:
 
-**Block List Project Ads** (154k): https://blocklistproject.github.io/Lists/adguard/ads-ags.txt
+Block List Project Ads (154k): https://blocklistproject.github.io/Lists/adguard/ads-ags.txt
 
-**Block List Project Crypto** (23k): https://blocklistproject.github.io/Lists/adguard/crypto-ags.txt
+Block List Project Crypto (23k): https://blocklistproject.github.io/Lists/adguard/crypto-ags.txt
 
-**Block List Project Malware** (435k): https://blocklistproject.github.io/Lists/adguard/malware-ags.txt
+Block List Project Malware (435k): https://blocklistproject.github.io/Lists/adguard/malware-ags.txt
 
-**Block List Project Phishing** (190k): https://blocklistproject.github.io/Lists/adguard/phishing-ags.txt
+Block List Project Phishing (190k): https://blocklistproject.github.io/Lists/adguard/phishing-ags.txt
 
-**Block List Project Ransomware** (2k): https://blocklistproject.github.io/Lists/adguard/ransomware-ags.txt
+Block List Project Ransomware (2k): https://blocklistproject.github.io/Lists/adguard/ransomware-ags.txt
 
-**Block List Project Tracking** (15k): https://blocklistproject.github.io/Lists/adguard/tracking-ags.txt
+Block List Project Tracking (15k): https://blocklistproject.github.io/Lists/adguard/tracking-ags.txt
 
-**Block List Project Scam** (1k): https://blocklistproject.github.io/Lists/adguard/scam-ags.txt
+Block List Project Scam (1k): https://blocklistproject.github.io/Lists/adguard/scam-ags.txt
 
-**MINIFIED/OPTIMIZED LISTS:**
+MINIFIED/OPTIMIZED LISTS:
 
-**EasyList Minified** (16k): https://easylist-downloads.adblockplus.org/easylist-minified.txt
+EasyList Minified (16k): https://easylist-downloads.adblockplus.org/easylist-minified.txt
 
-**EasyList Optimized** (51k): https://filters.adtidy.org/extension/ublock/filters/101_optimized.txt
+EasyList Optimized (51k): https://filters.adtidy.org/extension/ublock/filters/101_optimized.txt
 
-**EasyPrivacy Minified** (5k): https://easylist-downloads.adblockplus.org/easyprivacy-minified.txt
+EasyPrivacy Minified (5k): https://easylist-downloads.adblockplus.org/easyprivacy-minified.txt
 
-**EasyPrivacy Optimized** (30k): https://filters.adtidy.org/extension/ublock/filters/118_optimized.txt
+EasyPrivacy Optimized (30k): https://filters.adtidy.org/extension/ublock/filters/118_optimized.txt
 
-**AdGuard Base + EasyList Optimized** (78k): https://filters.adtidy.org/extension/ublock/filters/2_optimized.txt
+AdGuard Base + EasyList Optimized (78k): https://filters.adtidy.org/extension/ublock/filters/2_optimized.txt
 
-**AdGuard Mobile Ads Optimized** (11k): https://filters.adtidy.org/extension/ublock/filters/11_optimized.txt
+AdGuard Mobile Ads Optimized (11k): https://filters.adtidy.org/extension/ublock/filters/11_optimized.txt
 
-**AdGuard Tracking Protection Optimized** (164k): https://filters.adtidy.org/extension/ublock/filters/3_optimized.txt
+AdGuard Tracking Protection Optimized (164k): https://filters.adtidy.org/extension/ublock/filters/3_optimized.txt
 
-**AdGuard Annoyances Optimized** (48k): https://filters.adtidy.org/extension/ublock/filters/14_optimized.txt
+AdGuard Annoyances Optimized (48k): https://filters.adtidy.org/extension/ublock/filters/14_optimized.txt
 
-**Fanboy Annoyances Optimized** (42k): https://filters.adtidy.org/extension/ublock/filters/122_optimized.txt
+Fanboy Annoyances Optimized (42k): https://filters.adtidy.org/extension/ublock/filters/122_optimized.txt
 
-**AdGuard Social Optimized** (17k): https://filters.adtidy.org/extension/ublock/filters/4_optimized.txt
+AdGuard Social Optimized (17k): https://filters.adtidy.org/extension/ublock/filters/4_optimized.txt
 
-**Fanboy's Social Minified** (3k): https://easylist-downloads.adblockplus.org/fanboy-social-minified.txt
+Fanboy's Social Minified (3k): https://easylist-downloads.adblockplus.org/fanboy-social-minified.txt
 
-**Fanboy's Social Optimized** (7k): https://filters.adtidy.org/extension/ublock/filters/123_optimized.txt
+Fanboy's Social Optimized (7k): https://filters.adtidy.org/extension/ublock/filters/123_optimized.txt
 
+```
 **CHECK MY FILTER LISTS:** https://github.com/LexReek/adBlocklists
 
 **PAGES WITH LIST AND SETTINGS RECOMMENDATIONS:**
@@ -730,7 +844,6 @@ https://www.kaggle.com/datasets/shivd24coder/clean-web-adblock-filters
 https://zeltser.com/malicious-ip-blocklists/
 https://help.kagi.com/orion/features/custom-blocklists.html
 https://pastebin.com/nUSHUWXc
-```
 
 ### 5.7. RECOMMENDED CONFIGURATIONS IN LOCALCDN:**
 
@@ -745,28 +858,28 @@ Source: [Celenity](https://github.com/celenityy/ublock-origin-settings?#localcdn
 UserScripts are small pieces of code written in JavaScript that modify web pages by adding useful functions. To use them, you will need an extension called a userscript manager . We recommend using ViolentMonkey , which is open source. Scripts can be downloaded from internet repositories, but this requires a high degree of trust in the developer, as they may be compromised. Generating fingerprinting can increase the attack surface and present risks to privacy and security. Below are some recommendations focused on security and privacy (emphasis on the first three):
 
 ```
-**AdGuard Extra** - blocks ads in difficult cases, when the usual filter-based approach is not enough.
+AdGuard Extra - blocks ads in difficult cases, when the usual filter-based approach is not enough.
 https://github.com/AdguardTeam/AdGuardExtra#userscript
 
-**Don't track me Google** - removes the link tracking feature from Google search results. This speeds up the loading of search results and allows you to right-click or tap to copy the URL link.
+Don't track me Google - removes the link tracking feature from Google search results. This speeds up the loading of search results and allows you to right-click or tap to copy the URL link.
 https://github.com/Rob--W/dont-track-me-google
 
-**AdGuard Disable AMP** - Disables AMP (Accelerated Mobile Pages) on the Google search results page (there is also an adblock filter for this purpose, which would eliminate the need to use this script).
+AdGuard Disable AMP - Disables AMP (Accelerated Mobile Pages) on the Google search results page (there is also an adblock filter for this purpose, which would eliminate the need to use this script).
 https://github.com/AdguardTeam/DisableAMP#how-to-install
 
-**AdGuard PopUp Blocker** - Blocks unwanted pop-up ad windows.
+AdGuard PopUp Blocker - Blocks unwanted pop-up ad windows.
 https://github.com/AdguardTeam/PopupBlocker#installation
 
-**AdsBypasser** - Blocks countdown ads, intermediate continue pages, and pop-up ad windows.
+AdsBypasser - Blocks countdown ads, intermediate continue pages, and pop-up ad windows.
 https://adsbypasser.github.io
 
-**AntiAdware** - Blocks the download of unwanted applications (forced download accelerators, managers, and adware) when downloading from supported websites.
+AntiAdware - Blocks the download of unwanted applications (forced download accelerators, managers, and adware) when downloading from supported websites.
 https://github.com/HandyUserscripts/AntiAdware#installation
 
-**tinyShield** - Blocks ads from AdShield and anti-adblockers and bypasses AdShield integrity verification (useful for Korean, Japanese, and some international websites). https://github.com/List-KR/tinyShield
+tinyShield - Blocks ads from AdShield and anti-adblockers and bypasses AdShield integrity verification (useful for Korean, Japanese, and some international websites). https://github.com/List-KR/tinyShield
 
-Source: [AdGuard](https://adguard.com/kb/general/extensions/) and [Awesome-Userscripts](https://github.com/awesome-scripts/awesome-userscripts).
 ```
+Source: [AdGuard](https://adguard.com/kb/general/extensions/) and [Awesome-Userscripts](https://github.com/awesome-scripts/awesome-userscripts).
 
 ### 5.9. RECOMMENDED SETTINGS IN CANVASBLOCKER:
 After installing CanvasBlocker, an initial configuration screen will open; click on all four "Apply" buttons.
@@ -1397,46 +1510,84 @@ There are countless websites on the internet that teach about modifying configur
 **Check my user.js file:** https://raw.githubusercontent.com/LexReek/user.js/refs/heads/main/user.js
 
 **ArkenFox installation procedure:**
+
 1. With Firefox installed, download the file available at:
 https://github.com/arkenfox/user.js/blob/master/scratchpad-scripts/arkenfox-cleanup.js
+
 2- If you wish, back up your profile for security;
+
 Note: To find the profile folder, open Firefox, type “about:support” in the address bar, press Enter, search for “Profile Folder” and click “Open Folder”. Make a copy of the "prefs.js" file.
+
 3. Disconnect from the internet;
+
 4. Open the downloaded script with Notepad and scroll down a bit until you see the list of preferences. Remove the comma at the end of the last preference that appears above the following warning line:
+
 /* IMPORTANT: last active pref must not have a trailing comma */
+
 5. Copy all the contents of the opened file;
+
 6- In Firefox, type the following into the address bar and press Enter:
+
 about:config
+
 7- Press Ctrl+Shift+K to open the Web Console;
+
 8- Type “allow paste” and press Enter;
+
 9- Copy and press Enter;
+
 10. Restart Firefox and re-enable the connection;
+
 11- Access the following address:
+
 https://github.com/arkenfox/user.js/tree/master
+
 12- Download the following files:
+
 - prefsCleaner.bat (for Windows)
+
 - prefscleaner.sh (for Linux)
+
 - updater.bat (for Windows)
+
 - updater.sh (for Linux)
+
 - user.js
+
 Note: To download the file, click on its name and then on the “Download raw file” button that appears near the upper right corner. Then, go back and repeat with each file.
+
 13- If you have any configuration entries that you want to use with ArkenFox (such as those shown in the previous table), save them using Notepad with the following name:
+
 user-overrides.js
+
 13.a- You can consult the user-overrides.js templates from [12bytes](https://codeberg.org/12bytes/Firefox-user.js-supplement/raw/branch/master/user-overrides.js) ([source](https://12bytes.org/the-firefox-privacy-guide-for-dummies/)) and [yokoffing](https://raw.githubusercontent.com/yokoffing/Betterfox/refs/heads/main/personal/user-overrides.js).
+
 14- In Firefox, type the following into the address bar and press Enter:
+
 about:support
+
 15- On the page that opens, look for “Profile folder” and click on “Open folder”;
+
 16- Place the files from steps 12 and 13 in the folder that opened;
+
 17- Close Firefox;
+
 18- Right-click on the “Updater.bat” file, then select “Run as administrator”. In the window that opens, type “Y” and wait for it to finish. If it offers to run “prefsCleaner.bat”, type “Y”.
+
 19- If not, right-click on the “prefsCleaner.bat” file, then select “Run as administrator” and wait for it to finish.
 
 **ArkenFox update procedure:**
+
 1- Check your ArkenFox version by accessing your profile folder (as in steps 13 and 14) and opening the “user.js” file with Notepad;
+
 2- Compare with the ArkenFox version available at:
+
 https://raw.githubusercontent.com/arkenfox/user.js/refs/heads/master/user.js
+
 3- Whenever the ArkenFox version on the website is the latest, download the user.js file and place it in your profile folder (as in steps 11, 13 and 14);
+
 4- If you want to add any configuration entries, add them to the “user-overrides.js” file (as in step 12);
+
 5- Repeat steps 16, 17 and 18.
 
 ### 7. RECOMMENDED VPN PROVIDERS:
