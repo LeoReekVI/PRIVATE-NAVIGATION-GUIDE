@@ -16,12 +16,16 @@ It is recommended that your primary browser be based on Firefox, with the additi
 
 **- [Mozilla Firefox](https://www.mozilla.org/pt-BR/firefox/download/thanks/) + [ArkenFox]( https://github.com/arkenfox/user.js):**
 Mozilla Firefox stands out from its competitors due to its privacy, security, advanced configuration options, low RAM consumption, open-source code, and its refusal to adopt Chromium (browsers like Google Chrome, Microsoft Edge, Opera¹, Brave, Chromite, Vivaldi, and others are based on Chromium's source code).
+
 ArkenFox, on the other hand, is a project that maintains a configuration file model (user.js) for Firefox, aiming to harden it for maximum privacy and security, reducing tracking and fingerprinting, while attempting to minimize functionality loss or breakage that may occur. Installation instructions will be provided later. Using ArkenFox with other Firefox-based privacy solutions, such as LibreWolf, Mullvad Browser and Tor Browser is counterproductive.
+
 For Android devices, there is no easy way to implement ArkenFox; the Firefox Beta version, which has access to about:config, is recommended.
 
 **- [LibreWolf](https://librewolf.net/installation/windows/):**
 Implementing ArkenFox can be difficult for some users. As a ready-made solution, there is LibreWolf, an independent and pre-hardened fork of Firefox, with anti-fingerprint and anti-tracking improvements, without all the telemetry and services of Mozilla (this makes it lighter), without Google's location service, with a firewall that limits the ability of extensions to initiate connections, and with rapid updates whenever a new version of the Firefox source code is released.
+
 It is available for Windows, Linux, and macOS.
+
 For Android devices, I primarily recommend [Ironfox](https://gitlab.com/ironfox-oss/IronFox/-/releases) (a fork of Mull, which has been discontinued) and secondly [Fennec F- Droid](https://f-droid.org/pt_BR/packages/org.mozilla.fennec_fdroid/).
 
 ### 1.2. SECONDARY BROWSER INDICATION:
@@ -30,10 +34,12 @@ Considering that these stricter privacy options can hinder the functioning of so
 
 **- [Brave](https://brave.com/):**
 Brave is a complete, easier alternative with a more modern look, native adblocker, Tor mode (Tor Browser is better for this purpose), which cleans tracking parameters from URLs, with a VPN option, its own private search engine, etc. Furthermore, it's based on Chromium, which gives it greater compatibility with websites, since many developers only test their sites on Google Chrome, which holds the overwhelming majority of the market. Negative points: it collects data for commercial purposes and places ads from its partners (who pay) in place of blocked ads.
+
 Available for Windows, macOS, Linux, Android and iOS.
 
 **- [Chromite](https://github.com/uazo/cromite/)**
 Developed from the discontinued Bromite (a fork), it is based on Chromium with additional security packages from GrapheneOS . It features an ad blocker, fingerprinting protection , DNS over HTTPS support, and other privacy and security enhancements.
+
 Available for Windows, Linux, and Android.
 
 ### 1.3. INDICATION OF ANONYMOUS BROWSER:
@@ -42,10 +48,12 @@ If anonymity is desired, it is recommended to use the Tor network or a VPN.
 
 **- [Tor Browser](https://www.torproject.org/download/):**
 Tor is the official browser of the Tor project, developed from Firefox and hardened against tracking, fingerprinting, and telemetry, specifically for use on the Tor network, i.e., to provide anonymity (it even hides your IP address). Disadvantages: very slow connection; it is easily detected by some websites that block it; the Tor network is targeted by hackers, governments, and organizations that try to monitor the data transmitted through it, which is done through the exit node that may have been maliciously created or be under control, because the servers are run by volunteers and there is a lack of transparency. However, since Tor changes the nodes used every 10 minutes, this may not be a problem. Avoid using personal data on the Tor network, such as email, website passwords, etc.
+
 Available for Windows, Linux, macOS , and Android. However, it works best on the [Tails](https://tails.net/install/index.pt.html) operating system (designed to run from a USB drive and avoid surveillance and censorship) or on Whonix (runs from a Virtual Machine).
 
 **- [Multivad Browser](https://mullvad.net/en/download/browser/windows/):**
 Developed from the Tor Browser, with all its privacy features, however for use with Mullvad VPN (and not the Tor network).
+
 Available for Windows, macOS and Linux.
 
 ¹ Opera was bought by a Chinese company involved in scandals, raising doubts about its privacy.
@@ -355,9 +363,11 @@ Warning: User-generated scripts generate a large amount of fingerprinting and ca
 
 **- [Privacy-Oriented Origin Policy (POOP)](https://addons.mozilla.org/en-US/firefox/addon/privacy-oriented-origin-policy/):** Handles Cross-Origin requests. Resource Sharing (CORS). Recommended configuration: set 'Global mode' to 'aggressive', enable the options 'Exclude root domain matches' and 'Spoof cross-origin referer'. You can also add the following to the exclusions area:
 
-> www.youtube.com *.googlevideo.com
-> www.youtube-nocookie.com *.googlevideo.com
-> *.dailymotion.com *.dmcdn.net
+```
+www.youtube.com *.googlevideo.com
+www.youtube-nocookie.com *.googlevideo.com
+*.dailymotion.com *.dmcdn.net
+```
 
 **- [Bitwarden](https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/):** The highest-rated open-source password manager according to experts. Using the browser's password manager is not recommended. The downside is its moderate RAM consumption.
 
@@ -803,46 +813,87 @@ Fanboy's Social Optimized (7k): https://filters.adtidy.org/extension/ublock/filt
 **CHECK MY FILTER LISTS:** https://github.com/LexReek/adBlocklists
 
 **PAGES WITH LIST AND SETTINGS RECOMMENDATIONS:**
+
 https://12bytes.org/ublock-origin-suggested-settings/
+
 https://adblockplus.org/subscriptions
+
 https://adblockultimate.net/filters
+
 https://avoidthehack.com/best-pihole-blocklists
+
 https://blokada.org/api/v4/content/en/filters.txt
+
 https://codeberg.org/celenity/BadBlock
+
 https://codeberg.org/celenity/Phoenix/wiki/Content-Blocking
+
 https://codeberg.org/celenity/ublock-origin-settings
+
 https://divested.dev/pages/dnsbl
+
 https://easylist.to/
+
 https://energized.pro/
+
 https://filterlists.com/
+
 https://firebog.net/
+
 https://github.com/AdguardTeam/FiltersRegistry/tree/master/filters
+
 https://github.com/blocklistproject/Lists
+
 https://github.com/celenityy/adguard-extension-settings
+
 https://github.com/celenityy/adguard-home-settings
+
 https://github.com/celenityy/BadBlock
+
 https://github.com/celenityy/ublock-origin-settings
+
 https://github.com/DandelionSprout/adfilt
+
 https://github.com/EnergizedProtection/block
+
 https://github.com/EnergizedProtection/EnergizedHosts
+
 https://github.com/hagezi/dns-blocklists
+
 https://github.com/knapah/uBlockOrigin-Filterlist
+
 https://github.com/maravento/blackweb
+
 https://github.com/ryanbr
+
 https://github.com/StevenBlack/hosts
+
 https://github.com/uBlockOrigin/uAssets/tree/master/filters
+
 https://github.com/uBlockOrigin/uAssetsCDN
+
 https://github.com/yokoffing/filterlists
+
 https://kb.adguard.com/en/general/adguard-ad-filters
+
 https://mdleom.com/about
+
 https://oisd.nl/setup
+
 https://tw3.gitlab.io/tw3filterlists/umatrix/
+
 https://www.fanboy.co.nz/
+
 https://www.fanboy.co.nz/regional.html
+
 https://www.iblocklist.com/lists.php
+
 https://www.kaggle.com/datasets/shivd24coder/clean-web-adblock-filters
+
 https://zeltser.com/malicious-ip-blocklists/
+
 https://help.kagi.com/orion/features/custom-blocklists.html
+
 https://pastebin.com/nUSHUWXc
 
 ### 5.7. RECOMMENDED CONFIGURATIONS IN LOCALCDN:**
@@ -876,7 +927,8 @@ https://adsbypasser.github.io
 AntiAdware - Blocks the download of unwanted applications (forced download accelerators, managers, and adware) when downloading from supported websites.
 https://github.com/HandyUserscripts/AntiAdware#installation
 
-tinyShield - Blocks ads from AdShield and anti-adblockers and bypasses AdShield integrity verification (useful for Korean, Japanese, and some international websites). https://github.com/List-KR/tinyShield
+tinyShield - Blocks ads from AdShield and anti-adblockers and bypasses AdShield integrity verification (useful for Korean, Japanese, and some international websites).
+https://github.com/List-KR/tinyShield
 
 ```
 Source: [AdGuard](https://adguard.com/kb/general/extensions/) and [Awesome-Userscripts](https://github.com/awesome-scripts/awesome-userscripts).
@@ -1514,7 +1566,7 @@ There are countless websites on the internet that teach about modifying configur
 1. With Firefox installed, download the file available at:
 https://github.com/arkenfox/user.js/blob/master/scratchpad-scripts/arkenfox-cleanup.js
 
-2- If you wish, back up your profile for security;
+2. If you wish, back up your profile for security;
 
 Note: To find the profile folder, open Firefox, type “about:support” in the address bar, press Enter, search for “Profile Folder” and click “Open Folder”. Make a copy of the "prefs.js" file.
 
@@ -1526,23 +1578,23 @@ Note: To find the profile folder, open Firefox, type “about:support” in the 
 
 5. Copy all the contents of the opened file;
 
-6- In Firefox, type the following into the address bar and press Enter:
+6. In Firefox, type the following into the address bar and press Enter:
 
 about:config
 
-7- Press Ctrl+Shift+K to open the Web Console;
+7. Press Ctrl+Shift+K to open the Web Console;
 
-8- Type “allow paste” and press Enter;
+8. Type “allow paste” and press Enter;
 
-9- Copy and press Enter;
+9. Copy and press Enter;
 
 10. Restart Firefox and re-enable the connection;
 
-11- Access the following address:
+11. Access the following address:
 
 https://github.com/arkenfox/user.js/tree/master
 
-12- Download the following files:
+12. Download the following files:
 
 - prefsCleaner.bat (for Windows)
 
@@ -1556,39 +1608,39 @@ https://github.com/arkenfox/user.js/tree/master
 
 Note: To download the file, click on its name and then on the “Download raw file” button that appears near the upper right corner. Then, go back and repeat with each file.
 
-13- If you have any configuration entries that you want to use with ArkenFox (such as those shown in the previous table), save them using Notepad with the following name:
+13. If you have any configuration entries that you want to use with ArkenFox (such as those shown in the previous table), save them using Notepad with the following name:
 
 user-overrides.js
 
-13.a- You can consult the user-overrides.js templates from [12bytes](https://codeberg.org/12bytes/Firefox-user.js-supplement/raw/branch/master/user-overrides.js) ([source](https://12bytes.org/the-firefox-privacy-guide-for-dummies/)) and [yokoffing](https://raw.githubusercontent.com/yokoffing/Betterfox/refs/heads/main/personal/user-overrides.js).
+13.a. You can consult the user-overrides.js templates from [12bytes](https://codeberg.org/12bytes/Firefox-user.js-supplement/raw/branch/master/user-overrides.js) ([source](https://12bytes.org/the-firefox-privacy-guide-for-dummies/)) and [yokoffing](https://raw.githubusercontent.com/yokoffing/Betterfox/refs/heads/main/personal/user-overrides.js).
 
-14- In Firefox, type the following into the address bar and press Enter:
+14. In Firefox, type the following into the address bar and press Enter:
 
 about:support
 
-15- On the page that opens, look for “Profile folder” and click on “Open folder”;
+15. On the page that opens, look for “Profile folder” and click on “Open folder”;
 
-16- Place the files from steps 12 and 13 in the folder that opened;
+16. Place the files from steps 12 and 13 in the folder that opened;
 
-17- Close Firefox;
+17. Close Firefox;
 
-18- Right-click on the “Updater.bat” file, then select “Run as administrator”. In the window that opens, type “Y” and wait for it to finish. If it offers to run “prefsCleaner.bat”, type “Y”.
+18. Right-click on the “Updater.bat” file, then select “Run as administrator”. In the window that opens, type “Y” and wait for it to finish. If it offers to run “prefsCleaner.bat”, type “Y”.
 
-19- If not, right-click on the “prefsCleaner.bat” file, then select “Run as administrator” and wait for it to finish.
+19. If not, right-click on the “prefsCleaner.bat” file, then select “Run as administrator” and wait for it to finish.
 
 **ArkenFox update procedure:**
 
-1- Check your ArkenFox version by accessing your profile folder (as in steps 13 and 14) and opening the “user.js” file with Notepad;
+1. Check your ArkenFox version by accessing your profile folder (as in steps 13 and 14) and opening the “user.js” file with Notepad;
 
-2- Compare with the ArkenFox version available at:
+2. Compare with the ArkenFox version available at:
 
 https://raw.githubusercontent.com/arkenfox/user.js/refs/heads/master/user.js
 
-3- Whenever the ArkenFox version on the website is the latest, download the user.js file and place it in your profile folder (as in steps 11, 13 and 14);
+3. Whenever the ArkenFox version on the website is the latest, download the user.js file and place it in your profile folder (as in steps 11, 13 and 14);
 
-4- If you want to add any configuration entries, add them to the “user-overrides.js” file (as in step 12);
+4. If you want to add any configuration entries, add them to the “user-overrides.js” file (as in step 12);
 
-5- Repeat steps 16, 17 and 18.
+5. Repeat steps 16, 17 and 18.
 
 ### 7. RECOMMENDED VPN PROVIDERS:
 
