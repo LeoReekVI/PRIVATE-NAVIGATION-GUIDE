@@ -38,9 +38,15 @@ Brave is a complete, easier alternative with a more modern look, native adblocke
 Available for Windows, macOS, Linux, Android and iOS.
 
 **- [Chromite](https://github.com/uazo/cromite/)**
-Developed from the discontinued Bromite (a fork), it is based on Chromium with additional security packages from GrapheneOS . It features an ad blocker, fingerprinting protection , DNS over HTTPS support, and other privacy and security enhancements.
+Developed from the discontinued Bromite (a fork), it is based on Chromium with additional security packages from GrapheneOS. It features an ad blocker, fingerprinting protection , DNS over HTTPS support, and other privacy and security enhancements, such as a built-in ad blocker and, in the Android version, a user-script manager.
 
 Available for Windows, Linux, and Android.
+
+**- [Ungoogled Chromium](https://ungoogled-software.github.io/ungoogled-chromium-binaries/)**
+Due to some glitches in the Cromite project update, I'm now also recommending Ungoogled Chromium.
+
+Available for Windows, Linux, and macOS.
+
 
 ### 1.3. INDICATION OF ANONYMOUS BROWSER:
 
@@ -380,6 +386,7 @@ www.youtube-nocookie.com *.googlevideo.com
 Check out relevant information about extensions on the websites [privacyguides.org](https://www.privacyguides.org/articles/2021/12/01/firefox-privacy-2021-update/), [12bytes](https://codeberg.org/12bytes/firefox-config-guide), and the [ArkenFox Wiki](https://github.com/arkenfox/user.js/wiki/4.1-Extensions).
 
 ### 5.3. EXTENSIONS NOT RECOMMENDED:
+
 **- Adblock Plus:** a closed-source program maintained by a private company that has an "acceptable ads" program, where companies can pay to avoid having their ads blocked. It has less efficient blocking and higher RAM consumption compared to uBlock Origin.
 
 **- ClearURLs:** redundant since uBlock Origin added the “removeparam” function; simply add the Dandelion filter. ClearURLs for uBo (topic 5.4).
@@ -422,6 +429,24 @@ Check out relevant information about extensions on the websites [privacyguides.o
 
 ### 5.4. RECOMMENDED SETTINGS IN UBLOCK ORIGIN:
 
+In Chromium-based browsers such as Edge, Ungoogled Chromium, Cromite, Brave, Vivaldi, DuckDuckGo, and Opera (except Google Chrome), it is possible to install uBlock Origin.
+
+The most effective installation method is as follows:
+
+1. Access [https://github.com/gorhill/uBlock/releases]( https://github.com/gorhill/uBlock/releases);
+
+2. In the first version that appears, click on Assets and download the chromium.zip file;
+
+3. Unzip the downloaded file;
+
+4. Open the browser, go to Menu > Extensions > click on Manage Extensions;
+
+5. Enable the “Developer mode” option;
+
+6. Click on “Load without package” and select the extracted folder.
+
+### 5.5. RECOMMENDED SETTINGS IN UBLOCK ORIGIN:
+
 Within your browser, click the uBlock Origin extension icon. Go to Origin and click on the gears to open the settings and configure them as follows:
 
 SETTINGS:
@@ -433,12 +458,19 @@ SETTINGS:
 - I am an advanced user -> ✅
 
 ADVANCED:
+
 Click on the gear icon next to the "I am an advanced user" option to enter the advanced settings and configure it as follows:
+
 autoCommentFilterTemplate = {{url}}
+
 autoUpdateDelayAfterLaunch = 10 (update outdated filter lists x seconds after browser initialization)
+
 disableWebAssembly = true
+
 filterAuthorMode = true (enable dynamic filtering)
+
 trustedListPrefixes = -
+
 updateAssetBrowserCache = true (ignore the cache when manually fetching a filter list more than once per hour)
 
 FILTER LISTS:
@@ -450,7 +482,7 @@ FILTER LISTS:
 
 Source: [uBlock Origin GitHub](https://github.com/uBlockOrigin/uBlock-issues/wiki/Blocking-mode), by developer [Raymond Hill](https://github.com/gorhill/uBlock/wiki/Advanced-settings#blockingprofiles), [Yokoffing](https://github.com/yokoffing/filterlists?tab=readme-ov-file#advanced-settings), and [Celenity](https://codeberg.org/celenity/ublock-origin-settings).
 
-### 5.5. HARD LOCK SETTINGS IN UBLOCK ORIGIN:
+### 5.6. HARD LOCK SETTINGS IN UBLOCK ORIGIN:
 
 > [!Warning]
 > Hard blocking mode greatly increases privacy and security, but it causes frequent website crashes. These crashes can be circumvented, as explained below, but they are an inconvenience to the online browsing experience. Therefore, assess your need for them.
@@ -470,7 +502,7 @@ Copy the three lines below and paste them into the My Rules tab, under Temporary
 
 If any website experiences breakage, simply open the options panel and click on the red squares, leaving them uncolored. The "third-party" square corresponds to the first line above and is the one that most often causes breakages, so unchecking it may correct the problem. The "third-party scripts" and "third-party frames" squares correspond to the second and third lines above, respectively. Unchecking all three temporarily disables hard protection (returns to normal protection mode).
 
-### 5.6. RECOMMENDED FILTER LISTS FOR BLOCKING:
+### 5.7. RECOMMENDED FILTER LISTS FOR BLOCKING:
 
 In Filter Lists, at the bottom, click “Import” and, in the box that appears, paste the web address lines corresponding to the filter lists you want to add, then confirm by clicking “Apply changes” at the top.
 See below for some recommendations:
@@ -517,11 +549,11 @@ OISD Blocklist small (44k): https://small.oisd.nl
 
 ⭐️ Adaway (6,5k): https://adaway.org/hosts.txt
 
-Peter Lowe's hosts (3,4k): https://pgl.yoyo.org/adservers/serverlist.php?hostformat=adblockplus&showintro=1&mimetype=plaintext
+⭐️ Peter Lowe's hosts (3,4k): https://pgl.yoyo.org/adservers/serverlist.php?hostformat=adblockplus&showintro=1&mimetype=plaintext
 
 ⭐️ Dan Pollock’s hosts (11,7k): https://someonewhocares.org/hosts/hosts
 
-⭐️ MVPS hosts (8,7k / outdated): https://winhelp2002.mvps.org/hosts.txt
+MVPS hosts (8,7k / outdated): https://winhelp2002.mvps.org/hosts.txt
 
 SNAFU Blocklist (62k): https://raw.githubusercontent.com/RooneyMcNibNug/pihole-stuff/master/SNAFU.txt
 
@@ -657,8 +689,6 @@ ANTI-SCAM LISTS:
 
 Malware Filter Phishing (>1k): https://malware-filter.gitlab.io/malware-filter/phishing-filter-hosts.txt
 
-xRuffKez's Newly Registered Domains (NRDs) 14 days pishing adblock (4k): https://codeberg.org/xRuffKez/NRD/raw/branch/main/lists/14-day/adblock/nrd-phishing-14day
-
 ⭐️ Spam404 (7k): https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt
 
 Phishing Army Blocklist (82k): https://phishing.army/download/phishing_army_blocklist.txt
@@ -669,7 +699,7 @@ NoCoin AdBlock Plus (>1k): https://raw.githubusercontent.com/hoshsadiq/adblock-n
 
 NoCoin hosts (>1k): https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt
 
-Firebog WaLLy3K’s Pringente Crypto (16k): https://v.firebog.net/hosts/Prigent-Crypto.txt
+Firebog WaLLy3K’s Pringent Crypto (16k): https://v.firebog.net/hosts/Prigent-Crypto.txt
 
 BYPASS PAYWALLS AND LOGGIN LISTS:
 
@@ -697,7 +727,9 @@ HaGeZi's Whitelist / Allowlist Referral (>1k): https://raw.githubusercontent.com
 
 OTHER CELENITY’S LISTS:
 
-Celenity BadBlock (16k / breakage): https://badblock.celenity.dev/abp/badblock.txt
+⭐️ Celenity BadBlock Lite (16k): https://badblock.celenity.dev/abp/badblock_lite.txt
+
+Celenity BadBlock (16k / breakage): https://badblock.celenity.dev/abp/badblock_lite.txt
 
 Celenity BadBlock+ (16k / breakage): https://badblock.celenity.dev/abp/badblock_plus.txt
 
@@ -1088,20 +1120,20 @@ user_pref("cookiebanners.service.mode.privateBrowsing", 1);
 user_pref("network.cookie.cookieBehavior", 5);
 user_pref("security.cert_pinning.enforcement_level", 2); // Habilitar Pinning Strict (PKP - Public Key Pinning) = pode ocasionar problemas com antivírus, neste caso mude para 1
 user_pref("network.cookie.lifetimePolicy", 2); // Se definir como 3 os cookies serão armazenados pelo número de dias definidos em network.cookie.lifetime.days
-user_pref(“network.cookie.lifetime.days”, 15);
+user_pref("network.cookie.lifetime.days", 15);
 
 // Enable ETP (Enhanced Tracking Protection) in strict mode to enable TCP (Total Cookie Protection):
 user_pref("browser.contentblocking.category", "strict");
 
 // Activate state partitioning of service workers
-user_pref("privacy.partition.serviceWorkers” true);
+user_pref("privacy.partition.serviceWorkers", true);
 
 // Enable APS (Always Partitioning Storage
-user_pref("privacy.partition.always_partition_third_party_non_cookie_storage” true);
-user_pref("privacy.partition.always_partition_third_party_non_cookie_storage.exempt_sessionstorage” true);
+user_pref("privacy.partition.always_partition_third_party_non_cookie_storage", true);
+user_pref("privacy.partition.always_partition_third_party_non_cookie_storage.exempt_sessionstorage", true);
 
 // Prevents automatic reloading on websites (auto-refresh)
-user_pref("accessibility.blockautorefresh” true);
+user_pref("accessibility.blockautorefresh", true);
 
 // Prevents websites from blocking the right-click button
 user_pref("dom.event.contextmenu.enabled", false);
@@ -1368,7 +1400,7 @@ user_pref("browser.pocket.enabled", false);
 user_pref("extensions.pocket.enabled", false);
 
 // Disable Screenshots extension
-user_pref("extensions.Screenshots.disabled”, true);
+user_pref("extensions.Screenshots.disabled", true);
 
 // Disable PDF scripting
 user_pref("pdfjs.enableScripting", false);
@@ -1385,24 +1417,24 @@ user_pref("media.gmp-widevinecdm.enabled", false);
 user_pref("media.gmp-widevinecdm.visible", false);
 
 // Disable SVG
-user_pref("svg.disabled”, true);
+user_pref("svg.disabled", true);
 
 // Disabling WebGL (Web Graphics Library) may break gaming websites .
-user_pref("webgl.disabled”, true);
+user_pref("webgl.disabled", true);
 
 // Disable WebGPU
-user_pref("dom.webgpu.enabled”, false);
+user_pref("dom.webgpu.enabled", false);
 
 // Disable WebRTC ( IP leaks)
-user_pref("media.peerconnection.enabled”, false);
+user_pref("media.peerconnection.enabled", false);
 
 // Reinforce disabling WebRTC
-user_pref("media.peerconnection.ice.default_address_only”, true);
-user_pref("media.peerconnection.ice.proxy_only_if_behind_proxy”, true);
-user_pref("media.peerconnection.ice.no_host”, true);
+user_pref("media.peerconnection.ice.default_address_only", true);
+user_pref("media.peerconnection.ice.proxy_only_if_behind_proxy", true);
+user_pref("media.peerconnection.ice.no_host", true);
 
 // Disable Beacon
-user_pref("beacon.enabled”, false);
+user_pref("beacon.enabled", false);
 
 // Disable WebAssembly - WASM
 user_pref("javascript.options.wasm", false);
@@ -1551,8 +1583,7 @@ user_pref("privacy.clearOnShutdown.history", true);
 user_pref("privacy.clearOnShutdown.offlineApps", true);
 user_pref("privacy.clearOnShutdown.sessions", true);
 user_pref("privacy.clearOnShutdown.sitesettings", false);
-user_pref("privacy.sanitize.timeSpan", 0);
-
+user_pref("privacy.sanitize.timeSpan", 0); 
 ```
 
 ### 6.3. ARKENFOX
@@ -1708,3 +1739,4 @@ Avoid servers located in or owned by companies based in the following countries:
 **Countries with strong data protection laws and cryptographic keys:** Iceland, Switzerland, Panama, Costa Rica, Argentina, Poland, Czech Republic.
 
 For detailed information on data laws and cryptographic keys, visit [privacidade.digital](https://www.privacidade.digital/provedores/) and [gp-digital.org](https://www.gp-digital.org/world-map-of-encryption/).
+
