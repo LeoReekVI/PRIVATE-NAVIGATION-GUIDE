@@ -427,7 +427,7 @@ Check out relevant information about extensions on the websites [privacyguides.o
 
 **- uMatrix:** has not been updated since 2019.
 
-### 5.4. RECOMMENDED SETTINGS IN UBLOCK ORIGIN:
+### 5.4. HOW TO ADD UBLOCK ORIGIN IN CHROMIUM BROWSERS:
 
 In Chromium-based browsers such as Edge, Ungoogled Chromium, Cromite, Brave, Vivaldi, DuckDuckGo, and Opera (except Google Chrome), it is possible to install uBlock Origin.
 
@@ -928,7 +928,7 @@ https://help.kagi.com/orion/features/custom-blocklists.html
 
 https://pastebin.com/nUSHUWXc
 
-### 5.7. RECOMMENDED CONFIGURATIONS IN LOCALCDN:**
+### 5.7. RECOMMENDED CONFIGURATIONS IN LOCALCDN:
 
 Block Google Fonts -> ❌ (This is already covered by Yokoffing's Block list of third-party fonts, which I recommend; leaving Google Fonts blocked here will also cause problems and breakages.)
 
@@ -1118,8 +1118,8 @@ user_pref("cookiebanners.service.mode.privateBrowsing", 1);
 
 // Cookie settings for security
 user_pref("network.cookie.cookieBehavior", 5);
-user_pref("security.cert_pinning.enforcement_level", 2); // Habilitar Pinning Strict (PKP - Public Key Pinning) = pode ocasionar problemas com antivírus, neste caso mude para 1
-user_pref("network.cookie.lifetimePolicy", 2); // Se definir como 3 os cookies serão armazenados pelo número de dias definidos em network.cookie.lifetime.days
+user_pref("security.cert_pinning.enforcement_level", 2); // Enable Pinning Strict (PKP - Public Key Pinning) = can cause problems with antivirus, in this case change it to 1
+user_pref("network.cookie.lifetimePolicy", 2); // If you set it to 3, cookies will be stored for the number of days set in network.cookie.lifetime.days
 user_pref("network.cookie.lifetime.days", 15);
 
 // Enable ETP (Enhanced Tracking Protection) in strict mode to enable TCP (Total Cookie Protection):
@@ -1408,7 +1408,8 @@ user_pref("pdfjs.enableScripting", false);
 // Define extensions to work in restricted domains
 user_pref("extensions.enabledScopes", 5);
 user_pref("extensions.webextensions.restrictedDomains", "");
-user_pref("extensions.postDownloadThirdPartyPrompt", false); // Sempre exibir o prompt de instalação
+user_pref("extensions.postDownloadThirdPartyPrompt", false); // Always display the installation prompt
+
 
 // Disable DRM (streaming services will not work or will play at reduced quality)
 user_pref("media.eme.enabled", false);
@@ -1443,7 +1444,7 @@ user_pref("javascript.options.wasm", false);
 user_pref("security.ssl.require_safe_negotiation", true);
 
 // cross-site referrals.
-user_pref("network.http.referer.XOriginPolicy", 1); // 2 para maior segurança, mas quebra muitos sites
+user_pref("network.http.referer.XOriginPolicy", 1); // 2 for added security, but breaks many sites
 user_pref("network.http.referer.XOriginTrimmingPolicy", 2);
 
 // Activate Fingerprinting Advanced Protection (RFP) (may be aggressive for some sites)
@@ -1586,7 +1587,7 @@ user_pref("privacy.clearOnShutdown.sitesettings", false);
 user_pref("privacy.sanitize.timeSpan", 0); 
 ```
 
-### 6.3. ARKENFOX
+### 6.3. ARKENFOX:
 
 There are countless websites on the internet that teach about modifying configuration entries, and others that provide ready-made configuration files (user.js), such as [BetterFox](https://github.com/yokoffing/Betterfox), [Brainfucksec](https://brainfucksec.github.io/firefox-hardening-guide), [FFprofile](https://ffprofile.com/), and [Narsil](https://git.nixnet.services/Narsil/desktop_user.js). and [Pyllyukko](https://github.com/pyllyukko/user.js). However, the biggest highlight is the [ArkenFox project](https://github.com/arkenfox/user.js/), where the community has been constantly improving a configuration file model (user.js) focused on privacy and security, but minimally impacting browser usability (although, unfortunately, problems do occur on some websites).
 
