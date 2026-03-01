@@ -842,7 +842,7 @@ Fanboy's Social Minified (3k): https://easylist-downloads.adblockplus.org/fanboy
 Fanboy's Social Optimized (7k): https://filters.adtidy.org/extension/ublock/filters/123_optimized.txt
 
 ```
-**CHECK MY FILTER LISTS:** https://github.com/LexReek/adBlocklists
+**CHECK MY FILTER LISTS:** [https://github.com/LeoReekVI/adblock_lists](https://github.com/LeoReekVI/adblock_lists)
 
 **PAGES WITH LIST AND SETTINGS RECOMMENDATIONS:**
 
@@ -1591,7 +1591,7 @@ user_pref("privacy.sanitize.timeSpan", 0);
 
 There are countless websites on the internet that teach about modifying configuration entries, and others that provide ready-made configuration files (user.js), such as [BetterFox](https://github.com/yokoffing/Betterfox), [Brainfucksec](https://brainfucksec.github.io/firefox-hardening-guide), [FFprofile](https://ffprofile.com/), and [Narsil](https://git.nixnet.services/Narsil/desktop_user.js). and [Pyllyukko](https://github.com/pyllyukko/user.js). However, the biggest highlight is the [ArkenFox project](https://github.com/arkenfox/user.js/), where the community has been constantly improving a configuration file model (user.js) focused on privacy and security, but minimally impacting browser usability (although, unfortunately, problems do occur on some websites).
 
-**Check my user.js file:** https://raw.githubusercontent.com/LexReek/user.js/refs/heads/main/user.js
+**Check my user.js file:** [https://raw.githubusercontent.com/LeoReekVI/user.js/refs/heads/main/user.js](https://raw.githubusercontent.com/LeoReekVI/user.js/refs/heads/main/user.js)
 
 **ArkenFox installation procedure:**
 
